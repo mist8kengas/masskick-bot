@@ -22,12 +22,9 @@ async function handleError(
   );
 
   if (error) {
-    errorMessage.setDescription(
-      [
-        ":warning: An error occured while trying to run this command:",
-        error && `\`\`\`${error.message}\`\`\``,
-      ].join("\n"),
-    );
+    errorMessage
+      .setTitle(":warning: An error occured while trying to run this command")
+      .setDescription(`\`\`\`${error.message}\`\`\``);
   }
 
   await interaction
