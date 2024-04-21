@@ -1,0 +1,36 @@
+{
+  "name": "leg-kick-bot",
+  "version": "0.1.0",
+  "description": "A kick is a physical strike using the leg",
+  "main": "build/index.js",
+  "scripts": {
+    "ci": "biome ci ./src",
+    "lint": "biome lint ./src",
+    "lint:fix": "biome check --apply ./src",
+    "start": "node build/index.js",
+    "build": "tsc --build",
+    "build:watch": "tsc --watch",
+    "put-commands": "npm run build && node build/utils/deployCommands.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mist8kengas/masskick-bot.git"
+  },
+  "author": "mist8kengas",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mist8kengas/masskick-bot/issues"
+  },
+  "homepage": "https://github.com/mist8kengas/masskick-bot#readme",
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^1.7.0",
+    "@discordjs/rest": "^2.2.0",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  },
+  "type": "module"
+}
