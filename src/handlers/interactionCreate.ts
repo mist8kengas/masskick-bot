@@ -1,15 +1,5 @@
-import {
-  type CommandInteraction,
-  EmbedBuilder,
-  type Message,
-  type PartialMessage,
-} from "discord.js";
+import { type CommandInteraction, EmbedBuilder } from "discord.js";
 import type { ExtendedClient } from "..";
-
-export interface Externals {
-  deletedMessages: Map<string, [Message | PartialMessage, boolean]>;
-  github: URL;
-}
 
 async function handleError(
   interaction: CommandInteraction,
